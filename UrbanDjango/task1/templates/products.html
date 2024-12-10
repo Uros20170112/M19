@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ pagename }}</title>
+</head>
+<body>
+    <h1>{{ pagename }}</h1>
+    <ul>
+        {% for item in menu %}
+            <li><a href="#">{{ item }}</a></li>
+        {% endfor %}
+    </ul>
+    <h2>Lista proizvoda:</h2>
+    <ul>
+        {% for product in products %}
+            <li>
+                <strong>{{ product.name }}</strong> - {{ product.description }} (Cena: {{ product.price }} RSD)
+                <button>Kupi</button>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
